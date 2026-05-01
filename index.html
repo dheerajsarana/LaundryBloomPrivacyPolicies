@@ -28,42 +28,22 @@
     }
 
     header {
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-      padding: 2rem 0;
+      background: #0d0d0d;
+      border-bottom: 1px solid #222;
+      padding: 1.25rem 0;
       text-align: center;
     }
 
     .logo-mark {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      margin-bottom: 0.5rem;
-    }
-
-    .logo-icon {
-      width: 40px;
-      height: 40px;
-      background: var(--mint-dark);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
       justify-content: center;
+      text-decoration: none;
     }
 
-    .logo-icon svg {
-      width: 22px;
-      height: 22px;
-      fill: #fff;
-    }
-
-    .brand-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--ink);
-      letter-spacing: -0.3px;
+    .logo-img {
+      height: 56px;
+      width: auto;
     }
 
     .hero {
@@ -200,7 +180,37 @@
       color: var(--accent);
     }
 
-    .contact-card {
+    .steps {
+      counter-reset: step-counter;
+      list-style: none;
+      margin: 1rem 0 1rem 0;
+      padding: 0;
+    }
+
+    .steps li {
+      counter-increment: step-counter;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 1rem;
+      color: var(--muted);
+    }
+
+    .steps li::before {
+      content: counter(step-counter);
+      background: var(--mint);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 13px;
+      min-width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
       background: #fff;
       border: 1px solid var(--border);
       border-radius: 12px;
@@ -237,12 +247,7 @@
 
 <header>
   <div class="logo-mark">
-    <div class="logo-icon">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
-      </svg>
-    </div>
-    <span class="brand-name">Laundry Bloom</span>
+    <img class="logo-img" src="data:image/png;base64,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" alt="Laundry Bloom" />
   </div>
 </header>
 
@@ -265,6 +270,7 @@
       <li><a href="#retention">Data Retention</a></li>
       <li><a href="#security">Data Security</a></li>
       <li><a href="#rights">Your Rights</a></li>
+      <li><a href="#account-deletion">How to Delete Your Account</a></li>
       <li><a href="#children">Children's Privacy</a></li>
       <li><a href="#changes">Changes to This Policy</a></li>
       <li><a href="#contact">Contact Us</a></li>
@@ -352,18 +358,39 @@
     <p>To exercise any of these rights, please contact us at the details below.</p>
   </section>
 
+  <section id="account-deletion">
+    <h2><span class="section-num">9</span> How to Delete Your Account</h2>
+    <p>You have the right to delete your Laundry Bloom account and all associated personal data at any time. To request deletion, simply send us a WhatsApp message — no forms, no hassle.</p>
+    <ul class="steps">
+      <li>Open <strong>WhatsApp</strong> on your device.</li>
+      <li>Tap the button below or start a new chat with our number: <strong>+91 00000 00000</strong>.</li>
+      <li>Send the message: <em>"I would like to delete my Laundry Bloom account. My registered phone number is [your number]."</em></li>
+      <li>Our team will verify your identity and confirm the deletion request.</li>
+      <li>You will receive a final confirmation message once your account and data have been deleted.</li>
+    </ul>
+    <div style="text-align:center; margin: 1.5rem 0;">
+      <a href="https://wa.me/919380505004?text=I%20would%20like%20to%20delete%20my%20Laundry%20Bloom%20account.%20My%20registered%20phone%20number%20is%20" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; background:#25D366; color:#fff; text-decoration:none; padding: 12px 24px; border-radius: 50px; font-family:'DM Sans',sans-serif; font-size:15px; font-weight:500; box-shadow: 0 4px 14px rgba(37,211,102,0.35);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Request Account Deletion on WhatsApp
+      </a>
+    </div>
+    <div class="highlight-box">
+      <p>Once confirmed, your name, phone number, location history, and uploaded photos will be permanently removed from our systems within <strong>30 days</strong>. Order history may be retained for up to 90 days for legal and financial compliance.</p>
+    </div>
+  </section>
+
   <section id="children">
-    <h2><span class="section-num">9</span> Children's Privacy</h2>
+    <h2><span class="section-num">10</span> Children's Privacy</h2>
     <p>Laundry Bloom is not intended for use by individuals under the age of 18. We do not knowingly collect personal information from minors. If we become aware that a minor has provided us with personal data, we will delete it promptly.</p>
   </section>
 
   <section id="changes">
-    <h2><span class="section-num">10</span> Changes to This Policy</h2>
+    <h2><span class="section-num">11</span> Changes to This Policy</h2>
     <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Effective Date" at the top of this page and notify you via the app or SMS where appropriate. Continued use of Laundry Bloom after changes are posted constitutes your acceptance of the revised Policy.</p>
   </section>
 
   <section id="contact">
-    <h2><span class="section-num">11</span> Contact Us</h2>
+    <h2><span class="section-num">12</span> Contact Us</h2>
     <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please reach out to us:</p>
     <div class="contact-card">
       <p><strong>Laundry Bloom</strong></p>
