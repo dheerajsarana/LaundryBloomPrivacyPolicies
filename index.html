@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Laundry Bloom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --mint: #d4ede3;
+      --mint-dark: #4caf89;
+      --ink: #1a1a1a;
+      --muted: #555;
+      --light: #f7fbf9;
+      --border: #ddeee7;
+      --accent: #2e7d5e;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--mint-dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: #fff;
+    }
+
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.3px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #e8f5ee 0%, #f0f9f4 100%);
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .effective-badge {
+      display: inline-block;
+      background: var(--mint);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 1.25rem;
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .toc {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .toc h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 0.3rem;
+    }
+
+    .toc a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      margin-bottom: 2.75rem;
+    }
+
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-num {
+      background: var(--mint-dark);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin: 0.5rem 0 1rem 1.4rem;
+      color: var(--muted);
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    .highlight-box {
+      background: #e8f5ee;
+      border-left: 3px solid var(--mint-dark);
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+    }
+
+    .highlight-box p {
+      margin: 0;
+      font-size: 14.5px;
+      color: var(--accent);
+    }
+
+    .contact-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin-top: 1rem;
+    }
+
+    .contact-card p {
+      margin-bottom: 0.5rem;
+      font-size: 14.5px;
+    }
+
+    .contact-card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 13px;
+      color: #999;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      main { padding: 2rem 1.25rem 4rem; }
+      .hero { padding: 2.5rem 1.25rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+      </svg>
+    </div>
+    <span class="brand-name">Laundry Bloom</span>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="effective-badge">Effective Date: May 1, 2025</div>
+  <h1>Privacy Policy</h1>
+  <p>We believe in clean clothes <em>and</em> clean data practices. Here's exactly how we handle your information.</p>
+</div>
+
+<main>
+
+  <div class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#data-collected">Information We Collect</a></li>
+      <li><a href="#how-used">How We Use Your Information</a></li>
+      <li><a href="#sharing">Sharing of Information</a></li>
+      <li><a href="#third-party">Third-Party Services — Firebase</a></li>
+      <li><a href="#retention">Data Retention</a></li>
+      <li><a href="#security">Data Security</a></li>
+      <li><a href="#rights">Your Rights</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <section id="intro">
+    <h2><span class="section-num">1</span> Introduction</h2>
+    <p>Welcome to <strong>Laundry Bloom</strong> ("we", "our", or "us"). We operate a laundry pickup and delivery application designed to serve users across India.</p>
+    <p>This Privacy Policy explains what personal information we collect, why we collect it, how we use it, and what choices you have. By using the Laundry Bloom app, you agree to the practices described in this Policy.</p>
+    <div class="highlight-box">
+      <p>This Policy is governed by the <strong>Information Technology Act, 2000</strong> and the <strong>Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011</strong>, applicable to users in India.</p>
+    </div>
+  </section>
+
+  <section id="data-collected">
+    <h2><span class="section-num">2</span> Information We Collect</h2>
+    <p>We collect only the minimum information necessary to provide our laundry services. This includes:</p>
+    <ul>
+      <li><strong>Full Name</strong> — to identify you as a customer and personalise your experience.</li>
+      <li><strong>Phone Number</strong> — to contact you regarding your orders, delivery status, and service updates. Used for authentication via Firebase Phone Auth.</li>
+      <li><strong>Location Data</strong> — your precise or approximate device location, and your pickup/delivery address. We request location access to help you set your address accurately and to dispatch agents to the correct location. You may grant or deny this permission through your device settings at any time.</li>
+      <li><strong>Photos / Photo Library Access</strong> — with your explicit permission, we access your device's photo library so you can upload images of garments (e.g., for special care instructions or damage reporting). We do not store photos beyond their immediate use unless you explicitly choose to attach them to an order.</li>
+    </ul>
+    <p>We do <strong>not</strong> collect financial or payment information, email addresses, or any sensitive personal data as defined under applicable Indian law.</p>
+  </section>
+
+  <section id="how-used">
+    <h2><span class="section-num">3</span> How We Use Your Information</h2>
+    <p>Your information is used solely for legitimate service-related purposes, including:</p>
+    <ul>
+      <li>Processing and managing your laundry orders.</li>
+      <li>Communicating order confirmations, updates, and delivery notifications via SMS or call.</li>
+      <li>Dispatching pickup and delivery agents to your location.</li>
+      <li>Resolving disputes or addressing customer support queries.</li>
+      <li>Improving service quality and app functionality.</li>
+    </ul>
+    <p>We will never use your information for unsolicited marketing without your explicit consent.</p>
+  </section>
+
+  <section id="sharing">
+    <h2><span class="section-num">4</span> Sharing of Information</h2>
+    <p>We do not sell, rent, or trade your personal information. We may share your information only in the following limited circumstances:</p>
+    <ul>
+      <li><strong>Service Partners</strong> — Our delivery agents and laundry processing partners receive your name, phone number, and address only to fulfil your order.</li>
+      <li><strong>Legal Compliance</strong> — We may disclose information if required to do so by law, court order, or governmental authority in India.</li>
+      <li><strong>Business Transfer</strong> — In the event of a merger, acquisition, or sale of assets, your data may be transferred to the successor entity, subject to equivalent privacy protections.</li>
+    </ul>
+  </section>
+
+  <section id="third-party">
+    <h2><span class="section-num">5</span> Third-Party Services — Firebase</h2>
+    <p>Laundry Bloom uses <strong>Google Firebase</strong>, a platform provided by Google LLC, to power core parts of our app. Firebase may collect and process certain data on our behalf, including:</p>
+    <ul>
+      <li><strong>Firebase Authentication</strong> — handles secure phone number-based login. Your phone number is transmitted to Google's servers to generate and verify OTPs. Google's handling of this data is governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+      <li><strong>Firebase Analytics</strong> — collects anonymised, aggregated usage data (such as app screens visited, feature interactions, and crash reports) to help us improve the app. This data does not personally identify you.</li>
+      <li><strong>Firebase Storage</strong> — used to store garment photos or other files you upload within the app. Files are stored securely on Google's cloud infrastructure and are accessible only to authorised personnel.</li>
+    </ul>
+    <div class="highlight-box">
+      <p>Firebase is a Google service. Data processed through Firebase may be stored on servers outside India. By using Laundry Bloom, you consent to this cross-border transfer as necessary to deliver the service.</p>
+    </div>
+    <p>You can learn more about Firebase's data practices at <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a>.</p>
+  </section>
+
+  <section id="retention">
+    <h2><span class="section-num">6</span> Data Retention</h2>
+    <p>We retain your personal information for as long as your account is active or as needed to provide our services. If you request account deletion, we will remove your personal data within <strong>30 days</strong>, unless retention is required by law.</p>
+  </section>
+
+  <section id="security">
+    <h2><span class="section-num">7</span> Data Security</h2>
+    <p>We implement reasonable technical and organisational measures to protect your personal information from unauthorised access, disclosure, alteration, or destruction, in accordance with the IT Rules, 2011.</p>
+    <p>However, no method of transmission over the Internet or electronic storage is completely secure. While we strive to protect your data, we cannot guarantee absolute security.</p>
+  </section>
+
+  <section id="rights">
+    <h2><span class="section-num">8</span> Your Rights</h2>
+    <p>As a user, you have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Access</strong> — Request a copy of the personal information we hold about you.</li>
+      <li><strong>Correction</strong> — Ask us to correct any inaccurate or outdated information.</li>
+      <li><strong>Deletion</strong> — Request deletion of your personal data, subject to any legal obligations.</li>
+      <li><strong>Withdrawal of Consent</strong> — You may withdraw consent for data collection at any time; however, this may affect your ability to use certain features of our app.</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us at the details below.</p>
+  </section>
+
+  <section id="children">
+    <h2><span class="section-num">9</span> Children's Privacy</h2>
+    <p>Laundry Bloom is not intended for use by individuals under the age of 18. We do not knowingly collect personal information from minors. If we become aware that a minor has provided us with personal data, we will delete it promptly.</p>
+  </section>
+
+  <section id="changes">
+    <h2><span class="section-num">10</span> Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Effective Date" at the top of this page and notify you via the app or SMS where appropriate. Continued use of Laundry Bloom after changes are posted constitutes your acceptance of the revised Policy.</p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="section-num">11</span> Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please reach out to us:</p>
+    <div class="contact-card">
+      <p><strong>Laundry Bloom</strong></p>
+      <p>📍 India</p>
+      <p>📞 <a href="tel:+919380505004">+91 93805 05004</a></p>
+      <p>We aim to respond to all privacy-related queries within <strong>7 business days</strong>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2025 Laundry Bloom. All rights reserved. &nbsp;|&nbsp; Privacy Policy
+</footer>
+
+</body>
+</html>
